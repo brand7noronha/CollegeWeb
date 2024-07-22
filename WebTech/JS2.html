@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applying background colour using JavaScript</title>
+    <script>
+        //this function takes the value from the text input and changes the background color of the div.content to that value
+        function colVal(){
+            var val = document.getElementById("button_val").value;
+            document.getElementById("content").style.backgroundColor=val;
+            document.getElementById("detail").innerHTML=val;
+        }
+    </script>
+</head>
+<body>
+    <div id="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit ipsa voluptatum cum a rem delectus voluptates suscipit earum facere quis!
+    </div>
+    <div>The above paragraph will change it's color to <span id="detail"></span></div>
+    <label for="button">Enter the color:</label>
+    <input type="text" name="" id="button_val">
+    <input type="button" value="Submit" onclick="colVal();">
+   
+</body>
+</html>

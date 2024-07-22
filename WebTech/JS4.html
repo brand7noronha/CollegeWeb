@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function show(){
+        var items=document.getElementsByTagName("li");
+
+        for(var i=0;i<items.length;i++){
+            document.getElementById("result").innerHTML+=items[i].innerHTML+"<br>";
+       }
+        
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>Lectures on Monday</h2>
+            <ul>
+                <li>MAD</li>
+                <li>CG</li>
+                <li>WebTech</li>
+            </ul>
+            <p id="result"></p>
+            <input type="button" value="show list" onclick="show();">
+        </nav>
+    </header>
+</body>
+</html>
