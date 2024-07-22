@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a convertor from celsius to farenheit</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <script>
+        let cel = 23
+        function convert(cel) {
+            return ((9 / 5) * cel) + 32;
+        }
+        let r = convert(cel);
+
+        let text = "The temperature from " + cel + " Celsius to Fahrenheit is " + r + " Fahrenheit";
+        
+        document.getElementById("result").innerHTML = text;
+    </script>
+</body>
+
+</html>
