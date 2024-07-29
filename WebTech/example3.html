@@ -4,25 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Email validation</title>
     <script>
+        // this script checks if the user has entered email in correct format or else he or she will get an alert message!
         function validateForm() {
             var x = document.myForm.email.value;
             var atpos = x.indexOf("@");
             var dotpos = x.lastIndexOf(".");
 
             if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
-                alert("Not a valid email!")
-                return false
+                alert("Not a valid email!");
+                return false;
             }
         }
+        // the above code will not work for preview extension. Inorder for this code to work, please open with browser and try it!
     </script>
 </head>
 
 <body>
-    <form action="" onsubmit="return validateForm();" name="myForm" method="post">
+    <form action="abc.html" onsubmit="return validateForm();" name="myForm" method="post">
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email">
+        <input type="text" name="email" id="email">
         <input type="submit" value="Submit">
     </form>
 </body>

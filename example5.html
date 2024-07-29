@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM with Mouse</title>
+    <script>
+        //the below function will be called when we press down the mouse
+        function up() {
+            document.getElementById("p1").style.color = "red";
+            document.getElementById("p1").style.fontSize = "20px";
+        }
+        //the below function will be called when we release the mouse
+        function down() {
+            document.getElementById("p1").style.color = "lime";
+            document.getElementById("p1").style.fontSize = "10px";
+        }
+    </script>
+</head>
+
+<body>
+    <h3>mouse up and mouse down</h3>
+    <div id="p1" onmouseup="up();" onmousedown="down();">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+        temporibus fugiat, pariatur veritatis labore
+        aperiam quia perferendis atque blanditiis, beatae possimus soluta culpa, cupiditate aliquid porro delectus!
+        Earum, error facilis?</div>
+</body>
+
+</html>

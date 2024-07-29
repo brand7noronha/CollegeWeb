@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking user input using DOM</title>
+    <script>
+        // if the user doesn't click any of the radio buttons or checkboxs, then, he or she will be displayed an alert!
+        function validateForm() {
+            if (!document.myForm.rate[0].checked && !document.myForm.rate[1].checked && !document.myForm.rate[2].checked) {
+                alert("Please give feedback!");
+                return false;
+            }
+
+            if (!document.myForm.ui.checked && !document.myForm.fast.checked && !document.myForm.content.checked) {
+                alert("Please check what you liked!");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="success.html" method="post" onsubmit="return validateForm();" name="myForm">
+        <div>
+            Add your feedback:
+        1<input type="radio" name="rate">
+        2<input type="radio" name="rate">
+        3<input type="radio" name="rate">
+        </div>
+        
+        <label for="liked">What did you like about the app?</label>
+        <div>
+            <input type="checkbox" name="ui" id="liked">Good UI
+            <input type="checkbox" name="fast" id="liked">Fast
+            <input type="checkbox" name="content" id="liked">Liked the content
+        </div>
+        <br>
+        <input type="submit" value="Submit" name="submit">
+    </form>
+</body>
+
+</html>
