@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name validation</title>
+    <script>
+        function show() {
+            var fullname = document.getElementsByName("name");
+
+            var text = fullname[0].value + " " + fullname[1].value;
+            if (fullname[0].value.length == 0 || fullname[1].value.length == 0) {
+                document.getElementById("result").innerHTML = "first name or last name is empty!";
+            }
+            else {
+
+                document.getElementById("result").innerHTML = text;
+            }
+            document.getElementById("result").style.color = "red";
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <div>
+                <label for="fname">Enter first name:</label>
+                <input type="text" name="name" id="fname">
+            </div>
+            <div>
+                <label for="lname">Enter last name:</label>
+                <input type="text" name="name" id="lname">
+            </div>
+            <input type="button" value="Submit" onclick="show();">
+            <p id="result"></p>
+        </form>
+    </div>
+</body>
+
+</html>
