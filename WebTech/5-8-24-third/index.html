@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 100px;
+            background-color: rgb(52, 94, 131);
+            border: 2px solid black;
+        }
+    </style>
+    <script>
+        function moveD(e){
+            var x=e.clientX;
+            var y=e.clientY;
+            var value="coordinates are:("+x+", "+y+")";
+            document.getElementById("result").innerHTML=value;
+        }
+        
+        function clearD(){
+            document.getElementById("result").innerHTML="";
+        }
+        
+        function changecolor(){
+            document.getElementById("div1").style.backgroundColor="white";
+
+        }
+    </script>
+</head>
+<body>
+    <div id="div1" onmousemove="moveD(event)" onmouseout="clearD()" ondblclick="changecolor()"></div>
+    <p id="result">result: </p>
+</body>
+</html>

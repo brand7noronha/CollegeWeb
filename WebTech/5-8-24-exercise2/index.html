@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #outer {
+            padding: 10px;
+            border: 2px solid gray;
+            width: 200px;
+        }
+
+        .screen>input {
+            font-size: 15px;
+        }
+
+        .operands input,
+        .operations input {
+            font-size: 20px;
+            padding: 10px 15px;
+            margin: 5px;
+        }
+    </style>
+    <script>
+        var value = ""
+        function numinput(num) {
+            value += num;
+            //console.log(num1)
+            document.getElementById("display").value += num;
+        }
+        function operationinput(o) {
+            value += o;
+            document.getElementById("display").value += o;
+        }
+        function clearinput() {
+            document.getElementById("display").value = "";
+            value = "";
+        }
+        function calc() {
+            value = eval(value);
+            document.getElementById("display").value = value;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="outer">
+        <div class="screen">
+            <input type="text" name="display" id="display">
+        </div>
+        <div class="operands">
+            <input type="button" value="1" onclick="numinput('1')">
+            <input type="button" value="2" onclick="numinput('2')">
+            <input type="button" value="3" onclick="numinput('3')">
+            <input type="button" value="4" onclick="numinput('4')">
+            <input type="button" value="5" onclick="numinput('5')">
+            <input type="button" value="6" onclick="numinput('6')">
+            <input type="button" value="7" onclick="numinput('7')">
+            <input type="button" value="8" onclick="numinput('8')">
+            <input type="button" value="9" onclick="numinput('9')">
+            <input type="button" value="0" onclick="numinput('0')">
+            <div class="operations">
+            </div>
+
+            <div class="operations">
+                <input type="button" value="X" onclick="operationinput('*')">
+                <input type="button" value="+" onclick="operationinput('+')">
+                <input type="button" value="-" onclick="operationinput('-')">
+                <input type="button" value="/" onclick="operationinput('/')">
+                <input type="button" value="C" onclick="clearinput()">
+                <input type="button" value="=" onclick="calc()">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

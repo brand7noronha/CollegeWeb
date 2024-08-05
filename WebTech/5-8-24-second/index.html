@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightblue;
+            font-size: 15px;
+        }
+    </style>
+    <script>
+        function changecolor(){
+            document.getElementById("n1").style.backgroundColor="pink";
+        }
+        function press1(){
+            document.getElementById("n2").style.backgroundColor="pink";
+        }
+        function press2(){
+            document.getElementById("n2").style.backgroundColor="lightgreen";
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="n1" onkeypress="changecolor();">
+        <input type="text" id="n2" onkeydown="press1();" onkeyup="press2();">
+        <!-- note that 'onkeydown' event handler is called when any key on the keyboard is pressed -->
+        <!-- note that 'onkeyup' event handler is called when that particular key you pressed on the keyboard is released -->
+    </form>
+</body>
+</html>

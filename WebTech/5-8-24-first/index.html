@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using confirm() window method</title>
+    <script>
+        function showConfirmation() {
+            let a = confirm("Do you want to cancel?")
+            if (a) {
+                // if we press "ok" then the else part will get executed
+                alert("yes")
+                return true;
+            } else {
+                // if we press "cancel" then the else part will get executed
+                alert("no")
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <label for="reset">Enter number: </label>
+        <input type="text" id="reset"><br><br>
+        <input type="reset" value="reset" onclick="return showConfirmation();">
+    </form>
+</body>
+
+</html>
