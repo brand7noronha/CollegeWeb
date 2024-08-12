@@ -16,8 +16,9 @@
         }
         let r = convert(cel);
 
-        let text = "The temperature from " + cel + " Celsius to Fahrenheit is " + r + " Fahrenheit";
-        
+        // let text = "The temperature from " + cel + " Celsius to Fahrenheit is " + r + " Fahrenheit";
+        let text = `The temperature ${cel} Celsius is the same as ${r} Fahrenheit`
+
         document.getElementById("result").innerHTML = text;
     </script>
 </body>
