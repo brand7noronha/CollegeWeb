@@ -1,0 +1,5 @@
+<!ELEMENT credentials (fname,lname,id,department)>
+<!ELEMENT fname (#PCDATA)>
+<!ELEMENT lname (#PCDATA)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT department (#PCDATA)>
