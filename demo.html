@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="result"></div>
+<script>
+	var text="";
+	var s1=parseInt(prompt("Enter side one:"));
+	var s2=parseInt(prompt("Enter side two: "));
+	var s3=parseInt(prompt("Enter side three: "));
+	if(s1==s2 && s2==s3){
+		text="The triangle is equilateral!";
+	}else if((s1==s2 && s2!=s3) || (s2==s3 && s1!=s3) || (s1==s3 && s1!=s2)){
+		text="The triangle is scalene!";
+	}else{
+		text="The triangle is Isoceles!";
+		}
+	//console.log(text);
+	document.getElementById("result").innerHTML=text;
+</script>
+</body>
+
+</html>
