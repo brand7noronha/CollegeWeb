@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <style ></style>    
+    <style></style>
 </head>
 <link rel="stylesheet" href="style.css">
+
 <body>
     <header>
         <div class="card font start">
@@ -25,16 +26,16 @@
                 <div class="card">
                     <p>Which HTML tag from below is used to display an image?</p>
                     <div>
-                        <input type="radio" name="option" id="opt1">
-                        <label for="opt1">&lt; img &gt;</label>
+                        <input type="radio" name="option" id="card1opt1">
+                        <label for="card1opt1">&lt; img &gt;</label>
                     </div>
                     <div>
-                        <input type="radio" name="option" id="opt2">
-                        <label for="opt2">&lt; a &gt;</label>
+                        <input type="radio" name="option" id="card1opt2">
+                        <label for="card1opt2">&lt; a &gt;</label>
                     </div>
                     <div>
-                        <input type="radio" name="option" id="opt3">
-                        <label for="opt3">&lt; image &gt;</label>
+                        <input type="radio" name="option" id="card1opt3">
+                        <label for="card1opt3">&lt; image &gt;</label>
                     </div>
                     <div class="btn">
                         <a href="#q2">Next</a>
@@ -48,16 +49,16 @@
                 <div class="card">
                     <p>Which is CSS property is used to set the background image?</p>
                     <div>
-                        <input type="radio" name="option" id="opt1">
-                        <label for="opt1">&lt; img &gt;</label>
+                        <input type="radio" name="option1" id="card2opt1">
+                        <label for="card2opt1">&lt; img &gt;</label>
                     </div>
                     <div>
-                        <input type="radio" name="option" id="opt2">
-                        <label for="opt2">&lt; a &gt;</label>
+                        <input type="radio" name="option1" id="card2opt2">
+                        <label for="card2opt2">&lt; a &gt;</label>
                     </div>
                     <div>
-                        <input type="radio" name="option" id="opt3">
-                        <label for="opt3">background-image: url('');</label>
+                        <input type="radio" name="option1" id="card2opt3">
+                        <label for="card2opt3">background-image: url('');</label>
                     </div>
                     <div class="btn">
                         <a href="#q3">Next</a>
@@ -69,16 +70,16 @@
                 <div class="card">
                     <p>Which CSS property is used to rotate a div?</p>
                     <div>
-                        <input type="radio" name="option" id="opt1">
-                        <label for="opt1">transform: scale();</label>
+                        <input type="radio" name="option2" id="card3opt1">
+                        <label for="card3opt1">transform: scale();</label>
                     </div>
                     <div>
-                        <input type="radio" name="option" id="opt2">
-                        <label for="opt2">transform: rotate();</label>
+                        <input type="radio" name="option2" id="card3opt2">
+                        <label for="card3opt2">transform: rotate();</label>
                     </div>
                     <div>
-                        <input type="radio" name="option" id="opt3">
-                        <label for="opt3">transform: skew();</label>
+                        <input type="radio" name="option2" id="card3opt3">
+                        <label for="card3opt3">transform: skew();</label>
                     </div>
                     <div class="btn">
                         <a href="#q4">Next</a>
@@ -90,16 +91,16 @@
                 <div class="card">
                     <p>What is the correct HTML element for the largest heading?</p>
                     <div>
-                        <input type="radio" name="option" id="opt1">
-                        <label for="opt1">&lt; h1 &gt;</label>
+                        <input type="radio" name="option3" id="card4opt1">
+                        <label for="card4opt1">&lt; h1 &gt;</label>
                     </div>
                     <div>
-                        <input type="radio" name="option" id="opt2">
-                        <label for="opt2">&lt; heading &gt;</label>
+                        <input type="radio" name="option3" id="card4opt2">
+                        <label for="card4opt2">&lt; heading &gt;</label>
                     </div>
                     <div>
-                        <input type="radio" name="option" id="opt3">
-                        <label for="opt3">&lt; h6 &gt;</label>
+                        <input type="radio" name="option3" id="card4opt3">
+                        <label for="card4opt3">&lt; h6 &gt;</label>
                     </div>
                     <div class="btn">
                         <a href="#q5">Next</a>
@@ -111,19 +112,27 @@
                 <div class="card">
                     <p>How do you insert a comment in a CSS file?</p>
                     <div>
-                        <input type="radio" name="option" id="opt1">
-                        <label for="opt1"><code>&lt;!-- This is a comment. --&gt;</code></label>
+                        <input type="radio" name="option4" id="card5opt1">
+                        <label for="card5opt1">&lt;!-- This is a comment. --&gt;</label>
                     </div>
                     <div>
-                        <input type="radio" name="option" id="opt2">
-                        <label for="opt2"><code>// This is a comment. //</code></code></label>
+                        <input type="radio" name="option4" id="card5opt2">
+                        <label for="card5opt2">// This is a comment. //</label>
                     </div>
                     <div>
-                        <input type="radio" name="option" id="opt3">
-                        <label for="opt3"><code>/* This is a comment. */</code></label>
+                        <input type="radio" name="option4" id="card5opt3">
+                        <label for="card5opt3">/* This is a comment. */</label>
                     </div>
                     <div class="btn">
-                        <a onclick="">Submit</a>
+                        <a onclick="answerCheck();" href="#result">Submit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="question" id="q6">
+                <div class="card">
+                    <div  id="result"></div>
+                    <div class="btn">
+                        <a href="index.html">Reset Quiz</a>
                     </div>
                 </div>
             </div>
@@ -133,7 +142,7 @@
 
     </footer>
     <script src="script.js">
-       
+
     </script>
 </body>
 
