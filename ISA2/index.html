@@ -5,69 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=SUSE&display=swap');
-
-        header p {
-            font-size: 20px;
-            text-align: center;
-            font-family: "SUSE", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 300;
-            font-style: normal;
-        }
-
-        .question,
-        header {
-            height: 100vh;
-        }
-
-        .card{
-            /* height: 60vh; */
-            width: 80vw;
-            margin: 86px auto 0px auto;
-        }
-        header div.card {
-            display: flex;
-            flex-direction: column;
-            border: 1px solid black;
-            /* gap: 60px; */
-            justify-content: space-evenly;
-        }
-
-        header p {
-            border: 2px solid red;
-        }
-        header .card .btn input{
-            border: none;
-            background-color: aqua;
-            padding: 10px 25px;
-            /* display: block; */
-            border-radius: 10px;
-        
-        }
-        header .card .btn{
-            border: 2px solid red;
-            text-align: center;
-            padding: 25px;
-        }
-    </style>
+    <style ></style>    
 </head>
-
+<link rel="stylesheet" href="style.css">
 <body>
     <header>
-        <div class="card">
+        <div class="card font start">
             <p>Welcome to the Quiz!</p>
             <p>What do you know about HTML and CSS ?</p>
             <p>Let's check it out!</p>
             <div class="btn">
-                <input type="button" value="Start">
+                <a href="#q1">Start</a>
             </div>
         </div>
     </header>
     <main>
-        <div class="quiz">
-            <div class="question">
+        <div class="quiz font">
+            <div class="question" id="q1">
                 <div class="card">
                     <p>Which HTML tag from below is used to display an image?</p>
                     <div>
@@ -82,103 +36,105 @@
                         <input type="radio" name="option" id="opt3">
                         <label for="opt3">&lt; image &gt;</label>
                     </div>
-                    <div>
-                        <input type="button" value="Submit">
-                        <input type="button" value="Next">
+                    <div class="btn">
+                        <a href="#q2">Next</a>
                     </div>
 
                 </div>
 
             </div>
 
-            <div class="question">
-		<div class="card">
-			<p>Which is CSS property is used to set the background image?</p>
-			<div>
-                        	<input type="radio" name="option" id="opt1">
-                        	<label for="opt1">&lt; img &gt;</label>
-                    	</div>
-                    	<div>
-                        	<input type="radio" name="option" id="opt2">
-                        	<label for="opt2">&lt; a &gt;</label>
-                    	</div>
-                    	<div>
-                        	<input type="radio" name="option" id="opt3">
-                        	<label for="opt3">background-image: url('');</label>
-                    	</div>
-                    	<div>
-                        	<input type="button" value="Next">
-                    	</div>
-		</div>
+            <div class="question" id="q2">
+                <div class="card">
+                    <p>Which is CSS property is used to set the background image?</p>
+                    <div>
+                        <input type="radio" name="option" id="opt1">
+                        <label for="opt1">&lt; img &gt;</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="option" id="opt2">
+                        <label for="opt2">&lt; a &gt;</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="option" id="opt3">
+                        <label for="opt3">background-image: url('');</label>
+                    </div>
+                    <div class="btn">
+                        <a href="#q3">Next</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="question">
-		<div class="card">
-			<p>Which CSS property is used to rotate a div?</p>
-			<div>
-                        	<input type="radio" name="option" id="opt1">
-                        	<label for="opt1">transform: scale();</label>
-                    	</div>
-                    	<div>
-                        	<input type="radio" name="option" id="opt2">
-                        	<label for="opt2">transform: rotate();</label>
-                    	</div>
-                    	<div>
-                        	<input type="radio" name="option" id="opt3">
-                        	<label for="opt3">transform: skew();</label>
-                    	</div>
-                    	<div>
-                        	<input type="button" value="Next">
-                    	</div>
-		</div>
+            <div class="question" id="q3">
+                <div class="card">
+                    <p>Which CSS property is used to rotate a div?</p>
+                    <div>
+                        <input type="radio" name="option" id="opt1">
+                        <label for="opt1">transform: scale();</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="option" id="opt2">
+                        <label for="opt2">transform: rotate();</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="option" id="opt3">
+                        <label for="opt3">transform: skew();</label>
+                    </div>
+                    <div class="btn">
+                        <a href="#q4">Next</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="question">
-		<div class="card">
-			<p>What is the correct HTML element for the largest heading?</p>
-			<div>
-                        	<input type="radio" name="option" id="opt1">
-                        	<label for="opt1">&lt; h1 &gt;</label>
-                    	</div>
-                    	<div>
-                        	<input type="radio" name="option" id="opt2">
-                        	<label for="opt2">&lt; heading &gt;</label>
-                    	</div>
-                    	<div>
-                        	<input type="radio" name="option" id="opt3">
-                        	<label for="opt3">&lt; h6 &gt;</label>
-                    	</div>
-                    	<div>
-                        	<input type="button" value="Next">
-                    	</div>
-		</div>
+            <div class="question" id="q4">
+                <div class="card">
+                    <p>What is the correct HTML element for the largest heading?</p>
+                    <div>
+                        <input type="radio" name="option" id="opt1">
+                        <label for="opt1">&lt; h1 &gt;</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="option" id="opt2">
+                        <label for="opt2">&lt; heading &gt;</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="option" id="opt3">
+                        <label for="opt3">&lt; h6 &gt;</label>
+                    </div>
+                    <div class="btn">
+                        <a href="#q5">Next</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="question">
-		<div class="card">
-			<p>How do you insert a comment in a CSS file?</p>
-			<div>
-                        	<input type="radio" name="option" id="opt1">
-                        	<label for="opt1"><code>&lt;!-- This is a comment. --&gt;</code></label>
-                    	</div>
-                    	<div>
-                        	<input type="radio" name="option" id="opt2">
-                        	<label for="opt2"><code>// This is a comment. //</code></code></label>
-                    	</div>
-                    	<div>
-                        	<input type="radio" name="option" id="opt3">
-                        	<label for="opt3"><code>/* This is a comment. */</code></label>
-                    	</div>
-                    	<div>
-                        	<input type="button" value="Next">
-                    	</div>
-		</div>
+            <div class="question" id="q5">
+                <div class="card">
+                    <p>How do you insert a comment in a CSS file?</p>
+                    <div>
+                        <input type="radio" name="option" id="opt1">
+                        <label for="opt1"><code>&lt;!-- This is a comment. --&gt;</code></label>
+                    </div>
+                    <div>
+                        <input type="radio" name="option" id="opt2">
+                        <label for="opt2"><code>// This is a comment. //</code></code></label>
+                    </div>
+                    <div>
+                        <input type="radio" name="option" id="opt3">
+                        <label for="opt3"><code>/* This is a comment. */</code></label>
+                    </div>
+                    <div class="btn">
+                        <a onclick="">Submit</a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
     <footer>
 
     </footer>
+    <script src="script.js">
+       
+    </script>
 </body>
 
 </html>
